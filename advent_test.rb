@@ -5,7 +5,7 @@ require 'mutant/minitest/coverage'
 class AdventTest < Minitest::Test
 
   cover "Advent"
-  def test_2_numbers
+  def dont_test_2_numbers
     input =
       [
         1721,
@@ -22,9 +22,12 @@ class AdventTest < Minitest::Test
   def test_3_numbers
     input =
       [
+        1721,
         979,
         366,
-        675
+        299,
+        675,
+        1456
       ]
     report = Advent::Report.new(input)
     assert_equal(241861950, report.calculate_3_numbers)
