@@ -5,7 +5,7 @@ require 'mutant/minitest/coverage'
 class AdventTest < Minitest::Test
 
   cover "Advent"
-  def dont_test_2_numbers
+  def test_2_numbers
     input =
       [
         1721,
