@@ -9,6 +9,23 @@ module Advent
       cover "Advent::Trajectory"
 
       def test_valid
+        assert_equal(7, TreesEncounter.new(map_template.split).trees_count)
+      end
+
+      def map_template
+<<TREESMAP
+..##.......
+#...#...#..
+.#....#..#.
+..#.#...#.#
+.#...##..#.
+..#.##.....
+.#.#.#....#
+.#........#
+#.##...#...
+#...##....#
+.#..#...#.#
+TREESMAP
       end
     end
 
