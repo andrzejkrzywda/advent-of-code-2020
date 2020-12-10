@@ -23,4 +23,8 @@ end
 codes = File.readlines("./input_5.txt")
 finders = codes.map{|code| Advent::Boarding::RowAndSeatFinder.new(code)}
 seat_ids = finders.map{|finder| finder.seat_id}
-puts seat_ids.max
+puts seat_ids.sort
+
+(46..991).each do |i|
+  puts "missing: #{i}" if !seat_ids.include?(i)
+end
