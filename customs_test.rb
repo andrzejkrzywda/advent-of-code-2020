@@ -9,7 +9,25 @@ module Advent
       cover "Advent::Customs"
 
       def test_works
-        assert true
+        answers =
+        <<ANSWERS
+abc
+
+a
+b
+c
+
+ab
+ac
+
+a
+a
+a
+a
+
+b
+ANSWERS
+        assert_equal(11, AnswersCounter.new(answers).count)
       end
 
     end
