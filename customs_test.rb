@@ -27,7 +27,7 @@ a
 
 b
 ANSWERS
-        assert_equal(11, AnswersCounter.new(answers).count)
+        assert_equal(6, AnswersCounter.new(answers).count)
       end
 
     end

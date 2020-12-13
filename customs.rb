@@ -6,10 +6,18 @@ module Advent
       end
 
       def count
-        groups = @answers.split("\n\n")
+        groups_of_people = @answers.split("\n\n")
         sum = 0
-        groups.each do |group|
-          sum += group.split("\n").join.chars.uniq.length
+        groups_of_people.each do |group_of_people|
+          group_of_people_answers = []
+          group_of_people.split("\n").each do |person_survey|
+            person_survey.chars.each do |yes_answer|
+              group_of_people_answers << yes_answer
+            end
+          end
+          group_of_people_answers.uniq.each do |answer|
+            sum += 1 if group_of_people.count(answer) == group_of_people.split("\n").count
+          end
         end
         sum
       end
